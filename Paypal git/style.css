@@ -1,0 +1,152 @@
+:root{
+    --firstColor:#FFFFFF;
+    --secondColor: #001c64;
+    --thirdColor:#003087;
+    --fourthColor:#142C8E;
+    --fifthColor:#4DC3FC;   
+    --sixthColor:#f9b822;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* header css start */
+
+.headerContainer{
+    background-color: var(--firstColor);
+}
+
+.logoBrand img{
+    height: 40px;
+}
+
+.navLink{
+    border-radius: 30px;
+    font-size: 14px;
+
+}
+
+.navLink:hover{
+    background-color: var(--secondColor);
+    color: white;
+}
+
+#navbarBtn{
+    background-color: var(--thirdColor);
+    color: var(--firstColor);
+}
+
+.navbarBtn{
+    border: 2px solid var(--thirdColor);
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* header css end */
+
+/* main css start */
+
+/* banner css start */
+
+
+.bannerContainer{
+    height: 100%;
+    background-color: var(--fourthColor);
+    position: relative;
+    overflow: hidden;
+}
+.bannerImg img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.bannerHeading h1{
+    font-size: 80px;
+}
+#bannerLink{
+    color: var(--fifthColor);
+}
+
+.bannerLink p{
+    font-size: 18px;
+    color: var(--firstColor);
+    font-weight: 600;    
+}
+
+.bannerQr{
+    display: flex;
+    align-items: center;
+}
+.bannerQr img{
+    height: 180px;
+}
+
+.bannerForm{
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+.bannerForm input{
+    width: 80%;
+    padding: 10px 20px;
+}
+.bannerForm p{
+    width: 80%;
+    color: var(--firstColor);
+    font-weight: 500;
+}
+
+.bannerSignupBtn{
+    background-color: var(--sixthColor) !important;
+    color: black !important;
+    padding: 10px 20px;
+}
+.bannerMore{
+    position: relative;
+    z-index: 1;
+}
+
+.bannerRight{
+    position: relative;
+    bottom: -150px;
+}   
+
+/* banner css end */
+
+.secLeft{
+    height: 500px;
+}
+
+.fourthLeft{
+    height: 400px;
+
+}
+
+
+.seventhSec{
+    background-color: var(--secondColor) !important;
+}
+
+.sevenNum{
+    list-style: none;
+    gap: 20px;
+    font-size: 36px;
+}
+.sevenNum li{
+    background-color: var(--fifthColor);
+    padding: 2px 10px;
+    border-radius: 10px;
+    color: var(--firstColor);
+    font-weight: bold;
+}
+/* main css end */
