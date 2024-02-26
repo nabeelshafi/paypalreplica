@@ -1,56 +1,102 @@
-:root{
-    --firstColor:#FFFFFF;
+:root {
+    --firstColor: #FFFFFF;
     --secondColor: #001c64;
-    --thirdColor:#003087;
-    --fourthColor:#142C8E;
-    --fifthColor:#4DC3FC;   
-    --sixthColor:#f9b822;
+    --thirdColor: #003087;
+    --fourthColor: #142C8E;
+    --fifthColor: #4DC3FC;
+    --sixthColor: #f9b822;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
-a{
+body{
+    overflow-x: hidden;
+}
+
+a {
     text-decoration: none;
+    color: #000;
+}
+
+
+@media only screen and (max-width:1022px) {
+    #menuBtn {
+        display: flex !important;
+    }
+
+    .navbarLinks {
+        display: none !important;
+    }
 }
 
 
 /* header css start */
 
-.headerContainer{
+.headerContainer {
     background-color: var(--firstColor);
+    height: 88px;
+    box-shadow: 0.1px 0.1px 1px gray;
 }
 
-.logoBrand img{
+.logoBrand {
     height: 40px;
 }
 
-.navLink{
+.navLink {
     border-radius: 30px;
-    font-size: 14px;
-
+    font-size: 18px !important;
+    display: flex;
+    align-items: center;
 }
 
-.navLink:hover{
-    background-color: var(--secondColor);
-    color: white;
+.navbarLinks li {
+    list-style: none;
+    font-weight: bold;
 }
 
-#navbarBtn{
+.navbarLinks li:hover ,.navLinks a:hover{
+    background-color: var(--fifthColor);
+    color: var(--fourthColor);
+}
+
+
+#navbarBtn {
     background-color: var(--thirdColor);
     color: var(--firstColor);
 }
 
-.navbarBtn{
+.navbarBtn {
     border: 2px solid var(--thirdColor);
     border-radius: 30px;
     padding: 5px 20px;
     font-size: 18px;
     font-weight: bold;
+}
+
+
+
+#loginBtn {
+    border-radius: 30px;
+    background-color: var(--firstColor);
+}
+
+#signupBtn {
+    border-radius: 30px;
+    background-color: var(--secondColor);
+    color: var(--firstColor);
+}
+
+#menuBtn {
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    display: none;
 }
 
 /* header css end */
@@ -59,94 +105,144 @@ a{
 
 /* banner css start */
 
-
 .bannerContainer{
-    height: 100%;
-    background-color: var(--fourthColor);
-    position: relative;
+    border: 1px solid black;
+    background-color: #003087;
+    height: 100vh;
+    background-image:url('./images/banner.png');
+    background-position: center center;
+    background-size: cover;
     overflow: hidden;
 }
-.bannerImg img{
-    width: 100%;
+
+
+/* banner css start */
+
+.bannerColLeft,.bannerColRight{
+    height: 100vh;
+}
+
+
+.bannerColRight{
+    position: relative;
+
+}
+.bannerColRight img{
     position: absolute;
     bottom: 0;
 }
 
-.bannerHeading h1{
+#bannerHeading{
     font-size: 80px;
+    color: var(--firstColor);
 }
-#bannerLink{
+
+#bannerLink {
     color: var(--fifthColor);
 }
 
-.bannerLink p{
-    font-size: 18px;
+.bannerColLeft p {
+    font-size: 14px;
     color: var(--firstColor);
-    font-weight: 600;    
+    font-weight: 600;
 }
 
-.bannerQr{
+.bannerQr {
     display: flex;
     align-items: center;
 }
-.bannerQr img{
+
+.bannerQr img {
     height: 180px;
 }
 
-.bannerForm{
+.bannerForm {
     border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
-.bannerForm input{
-    width: 80%;
-    padding: 10px 20px;
-}
-.bannerForm p{
+
+.bannerForm p {
     width: 80%;
     color: var(--firstColor);
     font-weight: 500;
 }
 
-.bannerSignupBtn{
+.bannerSignupBtn {
     background-color: var(--sixthColor) !important;
     color: black !important;
     padding: 10px 20px;
 }
-.bannerMore{
-    position: relative;
-    z-index: 1;
-}
 
-.bannerRight{
-    position: relative;
-    bottom: -150px;
-}   
-
-/* banner css end */
+/* Section start */
 
 .secLeft{
-    height: 500px;
-}
-
-.fourthLeft{
     height: 400px;
-
 }
 
-
-.seventhSec{
-    background-color: var(--secondColor) !important;
+@media screen and (max-width:992px) {
+    .secLeft{
+        justify-content: center;
+    }
+    #iconHeading{
+        font-size: 14px;
+    }
+    .joinSecContainer li{
+        font-size: 26px !important;
+        padding: 10px 20px !important; 
+    }
 }
 
-.sevenNum{
-    list-style: none;
-    gap: 20px;
-    font-size: 36px;
+.iconImages{
+    padding: 10px 10px;
 }
-.sevenNum li{
+.iconImages img{
+    width:100% ;
+}
+
+/* Section end */
+
+/* join Section start */
+
+.joinSecContainer{
+    background-color: var(--secondColor);
+    min-height: 313px;
+    max-height: fit-content;
+    width: 100%;
+}
+
+.joinSecContainer h1{
+    font-size: 40px;
+    color: var(--firstColor);
+}
+
+.timerSec{
+    height: 196px;
+}
+
+.joinSecContainer li{
+    display: inline-block;
     background-color: var(--fifthColor);
-    padding: 2px 10px;
-    border-radius: 10px;
+    font-size: 50px;
+    padding: 2px 20px;
+    border-radius: 20px;
     color: var(--firstColor);
     font-weight: bold;
 }
+
+/* join Section end */
+
 /* main css end */
+
+/* footer start */
+
+.footerConatiner{
+    height: 40px;
+    background-color: var(--firstColor);
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
+    box-shadow: -0.1px -0.1px 1px gray;
+}
+
+/* footer end */
